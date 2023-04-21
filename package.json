@@ -6,19 +6,23 @@
     "serve": "vite preview",
     "build": "vite build",
     "dev": "vite",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
     "preview": "vite preview",
     "start": "vite --host"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "@vue/cli-shared-utils": "^5.0.8",
     "pinia": "^2.0.35",
     "roboto-fontface": "*",
     "vue": "^3.2.47",
+    "vue-i18n": "^9.1.0",
     "vue-router": "^4.1.6",
     "vuetify": "npm:@vuetify/nightly@next",
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
+    "@intlify/vue-i18n-loader": "^3.0.0",
     "@types/node": "^18.15.12",
     "@types/webfontloader": "^1.0.0",
     "@vitejs/plugin-vue": "^4.1.0",
