@@ -36,7 +36,7 @@ const router = createRouter({
                         {
                             text: 'Home',
                             to: { name: 'Home' },
-                            href:'/'
+                            href: '/'
                         },
                         {
                             text: paramToPage1
@@ -60,7 +60,7 @@ const router = createRouter({
                         {
                             text: paramToPage1,
                             to: {
-                                name: 'Page2',
+                                name: 'Page1',
                                 params: {
                                     paramToPage1: paramToPage1
                                 }

@@ -6,7 +6,7 @@
             params: {
                 paramToPage1 : route.params.paramToPage1,
             }
-        }"></v-btn>
+        }">page2</v-btn>
     </div>
 </template>
 

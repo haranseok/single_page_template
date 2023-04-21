@@ -21,8 +21,8 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 const breadCrumbs = computed(() => {
-    console.log(typeof route.meta.breadCrumb === "function")
     if (typeof route.meta.breadCrumb === "function") {
+
           return route.meta.breadCrumb.call(this, route);
         }
         return route.meta.breadCrumb;
