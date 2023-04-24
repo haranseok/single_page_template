@@ -1,11 +1,10 @@
 <template>
-    <BreadCrumb></BreadCrumb>
+    <BreadCrumbsItem />
     <router-view></router-view>
 </template>
 
 <script setup>
-import BreadCrumb from '@/components/item/BreadCrumbs.vue';
-
+import BreadCrumbsItem from '@/components/item/BreadCrumbsItem.vue'
 </script>
 
 <style lang="scss" scoped>

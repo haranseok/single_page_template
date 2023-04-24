@@ -9,7 +9,7 @@ const router = createRouter({
         },
         {
             path:'/',
-            component: ()=> import('@/components/layout/Layout.vue'),
+            component: ()=> import('@/components/layout/MainLayout.vue'),
             children: [
                 {
                     path:'home',
@@ -39,7 +39,8 @@ const router = createRouter({
                             href: '/'
                         },
                         {
-                            text: paramToPage1
+                            text: paramToPage1,
+                            to: { name: 'Page1' },
                         }
                     ]
                 }

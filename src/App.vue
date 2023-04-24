@@ -1,16 +1,14 @@
 <template>
   <v-app>
     <v-main>
-        <BreadCrumbs></BreadCrumbs>
-      <router-view></router-view>
+        <MainLayout />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import BreadCrumbs from '@/components/item/BreadCrumbs.vue';
-
+import MainLayout from '@/components/layout/MainLayout.vue'
 
 export default defineComponent({
   name: 'App',
@@ -20,7 +18,7 @@ export default defineComponent({
     }
   },
   components:{
-    BreadCrumbs
+    MainLayout
   }
 })
 </script>

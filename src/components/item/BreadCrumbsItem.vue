@@ -1,4 +1,3 @@
-
 <template>
     <v-breadcrumbs :items="breadCrumbs">
       <template v-slot:item="{ item }">
@@ -22,12 +21,10 @@ const route = useRoute();
 
 const breadCrumbs = computed(() => {
     if (typeof route.meta.breadCrumb === "function") {
-
           return route.meta.breadCrumb.call(this, route);
-        }
-        return route.meta.breadCrumb;
-        
-})
+        };
+    return route.meta.breadCrumb;
+});
   </script>
 
 <style lang="scss" scoped>
