@@ -1,15 +1,17 @@
 <template>
-<div>content</div>
+    <div>    
+        <MainView />
+        <TestContent />
+    </div>
 </template>
 
-<script setup lang="ts">
-import { useCouterStore } from '@/store/counter'
-import { ref } from 'vue'
-
-const counter = ref(useCouterStore());
-
+<script lang="ts" setup>
+import MainView  from '@/pages/contentPage/Main.vue';
+import TestContent from '@/pages/contentPage/TestContent.vue'
 </script>
 
 <style lang="scss" scoped>
-
+div{
+    height: 100%;
+}
 </style>

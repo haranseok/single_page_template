@@ -26,7 +26,7 @@ const router = createRouter({
                 {
                     path: '/:paramToPage1',
                     name: 'Page1',
-                    component: () => import('@/pages/subPage/Page1.vue'),
+                    component: () => import('@/pages/contentPage/Page1.vue'),
                     meta: {
                         breadCrumb(route: Route) {
                             const paramToPage1 = route.params.paramToPage1;
@@ -47,7 +47,7 @@ const router = createRouter({
                 {
                     path: '/:paramToPage1/page2',
                     name: 'Page2',
-                    component: () => import('@/pages/subPage/Page2.vue'),
+                    component: () => import('@/pages/contentPage/Page2.vue'),
                     meta: {
                         breadCrumb(route: Route) {
                             const paramToPage1 = route.params.paramToPage1;
