@@ -22,59 +22,60 @@ const router = createRouter({
                             }
                         ]
                     }
+                },
+                {
+                    path: '/:paramToPage1',
+                    name: 'Page1',
+                    component: () => import('@/pages/subPage/Page1.vue'),
+                    meta: {
+                        breadCrumb(route: Route) {
+                            const paramToPage1 = route.params.paramToPage1;
+                            return [
+                                {
+                                    text: 'Home',
+                                    to: { name: 'Home' },
+                                    href: '/'
+                                },
+                                {
+                                    text: paramToPage1,
+                                    to: { name: 'Page1' },
+                                }
+                            ]
+                        }
+                    },
+                },
+                {
+                    path: '/:paramToPage1/page2',
+                    name: 'Page2',
+                    component: () => import('@/pages/subPage/Page2.vue'),
+                    meta: {
+                        breadCrumb(route: Route) {
+                            const paramToPage1 = route.params.paramToPage1;
+                            return [
+                                {
+                                    text: 'Home',
+                                    to: { name: 'Home' },
+                                },
+                                {
+                                    text: paramToPage1,
+                                    to: {
+                                        name: 'Page1',
+                                        params: {
+                                            paramToPage1: paramToPage1
+                                        }
+                                    },
+                                },
+                                {
+                                    text: 'Page2',
+                                    to: { name: 'Page2' },
+                                }
+                            ]
+                        }
+                    }
                 }
+        
             ]
         },
-        {
-            path: '/:paramToPage1',
-            name: 'Page1',
-            component: () => import('@/pages/subPage/Page1.vue'),
-            meta: {
-                breadCrumb(route: Route) {
-                    const paramToPage1 = route.params.paramToPage1;
-                    return [
-                        {
-                            text: 'Home',
-                            to: { name: 'Home' },
-                            href: '/'
-                        },
-                        {
-                            text: paramToPage1,
-                            to: { name: 'Page1' },
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            path: '/:paramToPage1/page2',
-            name: 'Page2',
-            component: () => import('@/pages/subPage/Page2.vue'),
-            meta: {
-                breadCrumb(route: Route) {
-                    const paramToPage1 = route.params.paramToPage1;
-                    return [
-                        {
-                            text: 'Home',
-                            to: { name: 'Home' },
-                        },
-                        {
-                            text: paramToPage1,
-                            to: {
-                                name: 'Page1',
-                                params: {
-                                    paramToPage1: paramToPage1
-                                }
-                            },
-                        },
-                        {
-                            text: 'Page2',
-                            to: { name: 'Page2' },
-                        }
-                    ]
-                }
-            }
-        }
     ]
 });
 
