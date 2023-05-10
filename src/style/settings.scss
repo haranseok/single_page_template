@@ -1,4 +1,6 @@
 @import 'resize.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -48,7 +50,16 @@ ul{
     cursor: pointer;
 }
 
+
 /** display **/
+article{
+    padding: 5% 0;
+}
+.container_inner{
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
 .m0ato{
     margin: 0 auto;
@@ -68,7 +79,16 @@ ul{
     width: min(90%, 1200px);
 }
 
-/** text **/
+/** text / font **/
 .txt_center{
     text-align: center;
+}
+
+.title{
+    text-transform: uppercase;
+}
+
+.en_font{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }

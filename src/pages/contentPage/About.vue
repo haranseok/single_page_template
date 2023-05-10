@@ -1,17 +1,24 @@
 <template>
-    <div class="center" ref="comp">
-        여기로!
-    </div>
+    <article>
+        <div class="container_inner">
+            <h1 class="title en_font">About</h1>
+            <h3>{{ $t('subTitle') }}</h3>
+            <section>
+            </section>
+        </div>
+    </article>
 </template>
 
 <script lang="ts" setup>
+import {ref} from 'vue';
+
+const aboutTextList = ref({
+    title:
+})
 </script>
 
 <style lang="scss" scoped>
-    .center{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2.5rem;
-    }
+article{
+    height: 100%;
+}
 </style>

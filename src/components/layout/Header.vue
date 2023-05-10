@@ -1,5 +1,6 @@
 <template>
-    <header :class="isNav === true? 'h_bg':''">
+    <header 
+    :class="[{'h_bg':isNav === true},{'fixed': scrollY > 0}]">
         <div class="h_wrapper max_width m0ato jcsb">
             <div class="logo">
                 <img src="@/assets/logo/secrettown_logo.png" alt="logo">
@@ -39,6 +40,16 @@ const menuList = ref(['about','services', 'history', 'partners', 'content']);
 
 const isNav = ref(false);
 const isLangChange = ref(false);
+let scrollY = ref(0);
+
+function headerPosition(){
+    window.addEventListener('scroll', ()=>{
+        scrollY.value = window.scrollY
+        console.log(scrollY.value)
+    })
+};
+
+headerPosition()
 
 const resize = () => {
     window.addEventListener('resize', ()=>{
@@ -80,10 +91,11 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 99;
+    transition: all 0.2s;
     .h_wrapper{
         height: 80px;
         padding: 1% 0;
@@ -95,6 +107,11 @@ header{
         }
     }
 }
+.fixed{
+    transition: all 0.3s;
+    background: rgba(21, 0, 57, 0.252);
+}
+
 *::after, *::before{box-sizing: border-box;}
 .nav_wrapper{
     nav{
@@ -160,6 +177,7 @@ header{
     }
 
 }
+
 @media screen and (max-width: 768px) {
     .h_bg{
         transition: all 0.3s ease;

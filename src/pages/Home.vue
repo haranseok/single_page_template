@@ -1,14 +1,14 @@
 <template>
     <div>    
         <MainView @moveContent="move"/>
-        <TestContent ref="comp"/>
+        <About ref="comp"/>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import MainView  from '@/pages/contentPage/Main.vue';
-import TestContent from '@/pages/contentPage/TestContent.vue';
+import About from '@/pages/contentPage/About.vue';
 const comp = ref(null);
 console.log("test" + comp.value)
 function move() {
