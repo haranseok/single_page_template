@@ -1,5 +1,5 @@
 <template>
-    <div class="center">
+    <div class="center" ref="comp">
         여기로!
     </div>
 </template>

@@ -2,15 +2,13 @@
     <header :class="isNav === true? 'h_bg':''">
         <div class="h_wrapper max_width m0ato jcsb">
             <div class="logo">
-                logo
+                <img src="@/assets/logo/secrettown_logo.png" alt="logo">
             </div>
             <div class="nav_wrapper">
                 <Transition name="nav_animation">
                     <nav v-if="isNav" :class="isNav === true? 'active':''">
                         <ul class="flex menu">
-                            <li class="cp" data-hover="home">home</li>
-                            <li class="cp" data-hover="content">content</li>
-                            <li class="cp" data-hover="about">about</li>
+                            <li v-for="(menu, i) in menuList" :key="i" :data-hover="menu" class="cp">{{ menu }}</li>
                             <li class="cp language">
                                 <v-icon @click="isLangChange = !isLangChange">mdi-web</v-icon>
                                 <div class="lang_box" v-if="isLangChange">
@@ -37,6 +35,7 @@ import { useI18n } from 'vue-i18n';
 
 const {availableLocales, locale} = useI18n();
 const language = availableLocales;
+const menuList = ref(['about','services', 'history', 'partners', 'content']);
 
 const isNav = ref(false);
 const isLangChange = ref(false);
@@ -86,13 +85,13 @@ header{
     width: 100%;
     z-index: 99;
     .h_wrapper{
-        height: 60px;
+        height: 80px;
         padding: 1% 0;
         .logo{
-            font-weight: bold;
-            font-size: 1.5rem;
-            text-transform: capitalize;
-            color: #5a6794;
+            width: 150px;
+            img{
+                width: 100%;
+            }
         }
     }
 }
@@ -106,10 +105,10 @@ header{
                 display: block;
                 text-decoration: none;
                 text-transform: uppercase;
-                color: rgba(135, 148, 192,0.5);
-                padding: 10px;
+                color: rgba(187, 192, 211, 0.5);
+                padding: 0 20px;
                 &::before{
-                    color: rgba(135, 148, 192,1);
+                    color: rgb(214, 223, 254);
                     content: attr(data-hover);
                     position: absolute;
                     transition: transform 0.3s, opacity 0.3s;
@@ -161,12 +160,12 @@ header{
     }
 
 }
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 768px) {
     .h_bg{
         transition: all 0.3s ease;
         background: #e7e9ee;
         .h_wrapper{
-            .logo, .berger{
+            .berger{
                 color: rgba(135, 148, 192,1);
             }
         }
@@ -174,7 +173,7 @@ header{
 .nav_wrapper{
     nav{
         position: absolute;
-        top: 60px;
+        top: 80px;
         left: 0;
         width: 100%;
         height: 0;
@@ -201,11 +200,11 @@ header{
     }
     .active{
         height: 93.8vh;
-        background: #e7e9ee;
+        background: rgb(231, 233, 238);
     }
     .berger{
         display: block;
-        color: #5a6794;
+        color: rgb(228, 234, 255);
     }
 
 }
