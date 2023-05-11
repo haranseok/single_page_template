@@ -2,8 +2,8 @@
     <main>
         <div class="main_wrapper max_width m0ato">
             <div class="main_title">
-                <h1 v-html="$t('title')" class="txt_center"></h1>
-                <p v-html="$t('message')" class="txt_center ko"></p>
+                <h1 v-html="$t('title')" class="txt_center ko_font"></h1>
+                <p v-html="$t('message')" class="txt_center ko_font"></p>
             </div>
             <div class="scroll_down position cp" @click="arrowDown">
                 <p>scroll</p>
@@ -24,7 +24,7 @@ import { defineEmits } from 'vue';
 <style lang="scss" scoped>
     main{
         width: 100%;
-        height: 100%;
+        height: 968.5px;
         background: url('@/assets/images/mainImg.png');
         background-size: cover;
         position: relative;

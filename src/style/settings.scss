@@ -1,13 +1,10 @@
 @import 'resize.scss';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 :root {
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +30,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   line-height: 1.1;
 }
 
@@ -53,7 +50,7 @@ ul{
 
 /** display **/
 article{
-    padding: 5% 0;
+    padding-top: 5%;
 }
 .container_inner{
     width: 80%;
@@ -75,6 +72,12 @@ article{
     align-items: center;
 }
 
+.jcc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .max_width{
     width: min(90%, 1200px);
 }
@@ -85,10 +88,17 @@ article{
 }
 
 .title{
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 2%;
+    color: #44435f;
     text-transform: uppercase;
 }
 
-.en_font{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
+.subTitle{
+    color: #424e6a;
+    font-weight: 500;
+}
+
+.ko_font{
+    font-family: 'Nanum Gothic', sans-serif;
 }

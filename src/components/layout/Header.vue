@@ -45,7 +45,6 @@ let scrollY = ref(0);
 function headerPosition(){
     window.addEventListener('scroll', ()=>{
         scrollY.value = window.scrollY
-        console.log(scrollY.value)
     })
 };
 
@@ -109,7 +108,7 @@ header{
 }
 .fixed{
     transition: all 0.3s;
-    background: rgba(21, 0, 57, 0.252);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)) ;
 }
 
 *::after, *::before{box-sizing: border-box;}

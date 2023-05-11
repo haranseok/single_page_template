@@ -2,6 +2,7 @@
     <div>    
         <MainView @moveContent="move"/>
         <About ref="comp"/>
+        <History />
     </div>
 </template>
 
@@ -9,8 +10,10 @@
 import { ref } from 'vue';
 import MainView  from '@/pages/contentPage/Main.vue';
 import About from '@/pages/contentPage/About.vue';
+import History from '@/pages/contentPage/History.vue';
+
 const comp = ref(null);
-console.log("test" + comp.value)
+
 function move() {
     comp.value.$el.scrollIntoView({behavior:'smooth'})
 }
