@@ -3,9 +3,11 @@
        <div class="container_inner">
             <h1 class="title right">secret town history</h1>
             <div class="time_box">
-                <div class="time_wrap" v-for="(since, i) in data" :key="i">
-                    <h3>{{ since.year }}</h3>
-                    <p>{{ since.content }}</p>
+                <div class="time_inner">
+                    <div class="since_box" v-for="(since, i) in data" :key="i">
+                        <h3>{{ since.year }}</h3>
+                        <p>{{ since.content }}</p>
+                    </div>
                 </div>
             </div>
        </div>
@@ -28,11 +30,7 @@ article{
 }
 
     .time_box{
-        width:calc(100% - 80px);
-        max-width:800px;
-        margin:auto;
         position: relative;
-        left:-5px;        
         &::before{
             content: '';
             position: absolute;
@@ -44,8 +42,42 @@ article{
             border-radius: 5px;
             background: rgb(68, 67, 95);
         }
-        .time_wrap{
-            background: lime;
+        .time_inner{
+            width:calc(100% - 80px);
+            max-width:800px;
+            margin:auto;
+            padding: 5% 0 30% 0;
+            .since_box{
+                width: calc(50% - 40px);
+                margin: 5% 0;
+                text-align: right;
+                &:nth-child(2n){
+                    max-width: 300px;
+                    position: absolute;
+                    left: 53.5%;
+                    margin: -5% 0;
+                    text-align: left;
+                }
+                &:nth-child(8){
+                    margin-top: 1%;
+                }
+                &:nth-child(9){
+                    max-width: 300px;
+                    position: absolute;
+                    left: 22%;
+                }
+                h3{
+                    position: relative;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        border: 3px solid rgb(68, 67, 95);
+                    }
+                }
+            }
         }
     }
 </style>
