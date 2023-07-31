@@ -1,6 +1,6 @@
 <template>
     <div>
-        service
+        services
     </div>
 </template>
 

@@ -1,26 +1,26 @@
 <template>
-    <div>    
-        <MainView @moveContent="move"/>
-        <About ref="comp"/>
-        <History />
-    </div>
+  <div>
+    <MainView @moveContent="move" />
+    <About ref="comp" />
+    <History />
+  </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import MainView  from '@/pages/contentPage/Main.vue';
-import About from '@/pages/contentPage/About.vue';
-import History from '@/pages/contentPage/History.vue';
+import { ref } from "vue";
+import MainView from "@/pages/contentPage/Main.vue";
+import About from "@/pages/contentPage/About.vue";
+import History from "@/pages/contentPage/History.vue";
 
 const comp = ref(null);
 
 function move() {
-    comp.value.$el.scrollIntoView({behavior:'smooth'})
+  comp.value.$el.scrollIntoView({ behavior: "smooth" });
 }
 </script>
 
 <style lang="scss" scoped>
-div{
-    height: 100%;
+div {
+  height: 100%;
 }
 </style>

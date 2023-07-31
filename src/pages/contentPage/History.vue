@@ -44,19 +44,54 @@ article{
         }
         .time_inner{
             width:calc(100% - 80px);
-            max-width:800px;
-            margin:auto;
+            max-width: 600px;
+            margin: auto;
             padding: 5% 0 30% 0;
             .since_box{
                 width: calc(50% - 40px);
                 margin: 5% 0;
-                text-align: right;
+                h3{
+                    position: relative;
+                    font-size: 3rem;
+                    color: rgba(111, 108, 181, 0.5);
+                    text-align: right;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position:absolute;
+                        top: 25px;
+                        right: -50px;
+                        border-radius: 50%;
+                        border: 3px solid rgb(68, 67, 95);
+                        background: rgb(241, 245, 253);
+                    }
+                }
+                p{
+                    font-size: 0.95rem;
+                    color: rgb(68, 67, 95);
+                }
                 &:nth-child(2n){
-                    max-width: 300px;
+                    max-width: 250px;
                     position: absolute;
                     left: 53.5%;
                     margin: -5% 0;
                     text-align: left;
+                    h3{
+                        text-align: left;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        position:absolute;
+                        top: 25px;
+                        left: -52px;
+                        border-radius: 50%;
+                        border: 3px solid rgb(68, 67, 95);
+                    }
+                }
                 }
                 &:nth-child(8){
                     margin-top: 1%;
@@ -64,18 +99,7 @@ article{
                 &:nth-child(9){
                     max-width: 300px;
                     position: absolute;
-                    left: 22%;
-                }
-                h3{
-                    position: relative;
-                    &::after{
-                        content: '';
-                        display: block;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 50%;
-                        border: 3px solid rgb(68, 67, 95);
-                    }
+                    left: 21.7%;
                 }
             }
         }
